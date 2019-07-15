@@ -1,0 +1,13 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  height: inherit;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 15px #ced0d0;
+  cursor: pointer;
+}
