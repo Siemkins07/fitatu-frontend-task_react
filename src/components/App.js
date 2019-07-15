@@ -1,13 +1,16 @@
 import React from 'react';
 import '../styles/App.css';
+import Navigation from './Navigation';
 import Header from './Header';
 import Footer from './Footer';
-import EmployeesListPage from '../pages/EmployeesListPage';
-
+import Page from './Page';
+import { BrowserRouter as Router } from 'react-router-dom';
+import NavTest from './navTest'
 
 class App extends React.Component {
   state = {
     employees: [],
+    redirect: false,
   };
 
   componentDidMount() {
@@ -27,29 +30,33 @@ class App extends React.Component {
       })
   }
 
-  // handleEdit = (employee) => {
-  //   console.log(employee);
-  //   console.log('jest ok');
-  //   this.setState({
-  //   })
-  // }
+  handleEdit = (employee) => {
+    console.log(employee);
+    console.log('jest ok');
+    this.setState({
+      redirect: true
+    })
+  }
 
   render() {
 
-    const { employees } = this.state
+    const { employees, redirect } = this.state
     return (
-
-      <div className="App">
-        <header>
-          <Header />
-        </header>
-        <main>
-          <EmployeesListPage employees={employees} edit={this.handleEdit} />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <Router>
+        <div className="App">
+          {/* <Navigation /> */}
+          <NavTest />
+          <header>
+            <Header />
+          </header>
+          <main>
+            <Page employees={employees} edit={this.handleEdit} redirect={redirect} />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </Router>
     );
   }
 }
