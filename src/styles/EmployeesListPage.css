@@ -1,7 +1,6 @@
 .employeesList {
-  /* min-width: 100%; */
   display: grid;
-  grid-template-columns: 1fr 4fr 3fr 2fr 1fr 4fr 2fr;
+  grid-template-columns: 1fr 4fr 3fr 2fr 1fr 4fr 2fr 1fr;
   border-top: 1px solid black;
   border-right: 1px solid black;
 }
@@ -18,8 +17,8 @@
   grid-column: span 3 / 6;
 }
 
-.employeesList>span:nth-child(7n + 9),
-.employeesList>span:nth-child(7n + 10) {
+.employeesList>span:nth-child(8n + 10),
+.employeesList>span:nth-child(8n + 11) {
   border-left: none
 }
 

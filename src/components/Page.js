@@ -6,6 +6,7 @@ import AboutUsPage from '../pages/AboutUsPage'
 import ContactPage from '../pages/ContactPage'
 import FaqPage from '../pages/FaqPage'
 import AdminPage from '../pages/AdminPage';
+import InProgress from '../pages/InProgress';
 
 const Page = (props) => {
   return (
@@ -18,6 +19,7 @@ const Page = (props) => {
         <Route path="/contact" component={ContactPage} />
         <Route path="/faq" component={FaqPage} />
         <Route path="/admin" component={AdminPage} />
+        <Route path="/inprogress" component={InProgress} />
       </Switch>
     </>
   );

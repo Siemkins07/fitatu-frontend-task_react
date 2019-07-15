@@ -1,0 +1,7 @@
+.editColumn {
+  cursor: pointer;
+}
+
+.editColumn:hover {
+  text-decoration: underline;
+}

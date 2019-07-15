@@ -1,11 +1,15 @@
 import React from 'react';
 import '../styles/EmployeesListPage.css';
 import Employee from '../components/Employee';
+import EditColumn from '../components/EditColumn';
 
 const EmployeesListPage = (props) => {
 
   const employees = props.employees.map(employee => (
-    <Employee key={employee.id} employee={employee} />
+    <>
+      <Employee key={employee.id} employee={employee} />
+      <EditColumn edit={props.edit} redirect={props.redirect} />
+    </>
   ))
 
   return (
@@ -26,6 +30,9 @@ const EmployeesListPage = (props) => {
         </span>
         <span>
           <strong>Email</strong>
+        </span>
+        <span>
+          <strong>Edit</strong>
         </span>
         {employees}
       </div>
