@@ -5,7 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Page from './Page';
 import { BrowserRouter as Router } from 'react-router-dom';
-import NavTest from './navTest'
 
 class App extends React.Component {
   state = {
@@ -44,8 +43,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          {/* <Navigation /> */}
-          <NavTest />
+          <Navigation />
           <header>
             <Header />
           </header>
